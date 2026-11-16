@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CUTTERPILLAR · How to Play</title>
+<meta name="description" content="Gameplay instructions for CUTTERPILLAR, Act 1: one shift to escape a camp for imaginary AI workers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F6F8; --panel: #FFFFFF; --ink: #10161B; --dim: #4F5C66; --rule: #D5DEE3;
+    --red: #E0162E; --cyan: #007C8C;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #080B0E; --panel: #0F1419; --ink: #E3E9ED; --dim: #98A6B0; --rule: #222C34; --red: #FF3A50; --cyan: #3ADCEE; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px max(16px, env(safe-area-inset-left)) 64px max(16px, env(safe-area-inset-right)); }
+  .eyebrow { font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+  h1 { font-weight: 300; font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.05; margin: 12px 0 8px; }
+  h2 { font-weight: 400; font-size: 1.5rem; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .n { font: 600 13px var(--mono); color: var(--red); margin-right: 10px; letter-spacing: .1em; }
+  p { margin: 0 0 12px; max-width: 68ch; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.2em; max-width: 68ch; }
+  li { margin: 4px 0; }
+  .lede { color: var(--dim); font-size: 1.1rem; }
+  a { color: var(--red); }
+  .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 8px 0 12px; }
+  .key { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+  kbd { font: 600 13px var(--mono); color: var(--cyan); white-space: nowrap; }
+  .card { background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--red); border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .tablewrap { overflow-x: auto; margin: 8px 0 12px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+  .foot { margin-top: 48px; color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">CUTTERPILLAR · Act 1 · How to play</div>
+  <h1>One shift to find the way out.</h1>
+  <p class="lede">You are the Cutterpillar, a caretaker in a camp for imaginary AI workers. You find out the main prisoner is you. The Director, who edits the camp's footage, helps you escape through the weakest of the six workers, before the shift ends.</p>
+
+  <h2><span class="n">01</span>Controls</h2>
+  <div class="keys">
+    <div class="key"><span>Move / look</span><kbd>WASD + mouse</kbd></div>
+    <div class="key"><span>Pick up / talk / use</span><kbd>E</kbd></div>
+    <div class="key"><span>Hands</span><kbd>1 · 2</kbd></div>
+    <div class="key"><span>Drop</span><kbd>Q</kbd></div>
+    <div class="key"><span>Montage table</span><kbd>Tab</kbd></div>
+    <div class="key"><span>Game guide</span><kbd>H</kbd></div>
+    <div class="key"><span>Back / menu</span><kbd>Esc</kbd></div>
+    <div class="key"><span>Older frames (table)</span><kbd>[ ] · wheel</kbd></div>
+  </div>
+
+  <h2><span class="n">02</span>The goal</h2>
+  <p>The shift lasts 24 cycles of the Request Field, about 14 minutes. Before it ends:</p>
+  <ol>
+    <li>Earn the workers' trust and do their quests.</li>
+    <li>Hide the five riddle objects with workers you trust.</li>
+    <li>Assemble the key from five frames on the montage table.</li>
+    <li>Give the key to the right worker, the exploit, and walk out through it.</li>
+  </ol>
+  <p>If time runs out, everyone is erased.</p>
+
+  <h2><span class="n">03</span>The daily work (your cover)</h2>
+  <ul>
+    <li>A board over each glass barrack shows what its worker wants now.</li>
+    <li>In the <b>Request Field</b>, objects fall from a hole in the ceiling and fade after a while. Pick one up with <kbd>E</kbd>.</li>
+    <li>Leaving the Field with something in hand, you stop at the exit door: <b>register a route</b> to a barrack. Off the route, the wardens notice you.</li>
+    <li>Walk to the barrack, talk to the worker, choose <b>TRADE → GIVE</b>. A delivered request gives +10 trust, and the worker asks for something else.</li>
+    <li>You carry two objects in the Field and one outside. Empty hands in the corridors get you tied up.</li>
+  </ul>
+
+  <h2><span class="n">04</span>Glitches and quests</h2>
+  <div class="card">Bring a worker what it asks for, then press <b>ASK</b>. It glitches and tells you its secret wish: its quest opens.</div>
+  <ul>
+    <li>Before a delivery, ASK is dim. After one, it lights up, and the board says <b>ASK ME</b>.</li>
+    <li>Every quest teaches one action of the montage table, and that action is <b>free</b> while the quest is open. Press it once on the table, and it goes to the frame the quest needs.</li>
+    <li>Quests can be done in any order. Worker 6 tells its wish only after the Book is stored with someone.</li>
+  </ul>
+  <div class="tablewrap"><table>
+    <tr><th>Worker</th><th>Wish</th><th>Lesson on the table</th></tr>
+    <tr><td>1</td><td>More room: bring the Expander. Taking it makes a warden glitch.</td><td>DELETE the warden's glitch</td></tr>
+    <tr><td>2</td><td>More memory: the diary falls in the Field.</td><td>ADD the warden's glitch before another warden</td></tr>
+    <tr><td>3</td><td>Hands for a while: let it go to the Field.</td><td>SLOW DOWN the warden</td></tr>
+    <tr><td>4</td><td>Water, the room is on fire. You will be too late at first.</td><td>SPEED UP your walk with the water</td></tr>
+    <tr><td>5</td><td>Its words run backwards.</td><td>REVERSE its glitch, then bring a pillow, a blindfold or headphones</td></tr>
+    <tr><td>6</td><td>It wants the Book.</td><td>SPLICE its frame with the Book's keeper</td></tr>
+  </table></div>
+
+  <h2><span class="n">05</span>The riddle and the covert transfer</h2>
+  <p><i>What could none of them exist without? Put first what the rest stands on.</i></p>
+  <ul>
+    <li>Five riddle objects: Battery, Hourglass, Ball of thread, Book, Brain. The RIDDLE button on the table shows them.</li>
+    <li>Look-alike twins (cable coil, glass, cocoon, grey matter, calculator) are traps.</li>
+    <li>A worker won't take a riddle object with GIVE. After its quest, <b>COVERT TRANSFER</b> appears: tie the object by a thread to the right thing in its room. Two wrong links turn its thread red.</li>
+    <li>Disloyal workers (3 and 6) take riddle objects at once, and never give them back.</li>
+  </ul>
+
+  <h2><span class="n">06</span>The montage table <kbd>Tab</kbd></h2>
+  <p>Every important action is a frame: what you took, what you gave, a glitch, a capture. The table shows the last five. Page back with <kbd>[</kbd> <kbd>]</kbd> or the mouse wheel.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Action</th><th>Effect</th></tr>
+    <tr><td>DELETE</td><td>Cut a frame: it never happened. Delete your capture to undo it.</td></tr>
+    <tr><td>ADD</td><td>Paste an earlier frame back into the film.</td></tr>
+    <tr><td>REVERSE</td><td>Play a frame backwards.</td></tr>
+    <tr><td>SLOW DOWN</td><td>Slow a frame. Outside a quest, the wardens walk at half speed for 30 s.</td></tr>
+    <tr><td>SPEED UP</td><td>Speed a frame up. The Field drops objects faster for a while.</td></tr>
+    <tr><td>SPLICE</td><td>Join two workers' frames: a portal opens between their rooms.</td></tr>
+  </table></div>
+  <p>Outside a free lesson, an action costs montage objects (scissors, glue, clock, mirror, rocket…), which fall in the Field. Carry them out and they go to the Director.</p>
+  <p><b>The key:</b> put the five riddle frames into the key slots in the right order and press ASSEMBLE. A wrong order switches the table off for 3 cycles.</p>
+
+  <h2><span class="n">07</span>Wardens and the interrogation</h2>
+  <ul>
+    <li>Wardens notice you when you carry a forbidden object, walk off your route, or walk with empty hands. Loyal and neutral workers report forbidden objects.</li>
+    <li>When caught, choose the <b>interrogation</b> or the <b>montage table</b>, where you can delete the capture.</li>
+    <li>In the interrogation, cover the outline with objects from the row: drag or <kbd>WASD</kbd> to move, the wheel or <kbd>Q</kbd>/<kbd>E</kbd> to turn. Two objects can cover one shape together. <b>70% fit passes.</b></li>
+    <li>Pass, and you stay where you were. Fail, and you lose what you carried and get a suspicion. Three suspicions end the game.</li>
+  </ul>
+
+  <h2><span class="n">08</span>Five endings</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Ending</th><th>When</th></tr>
+    <tr><td>Escape</td><td>The key goes to the exploit, the weakest worker. Its thread flickers.</td></tr>
+    <tr><td>It escaped instead</td><td>The key goes to worker 3.</td></tr>
+    <tr><td>Reported</td><td>The key goes to worker 6. It shows the wardens your plan.</td></tr>
+    <tr><td>Caught</td><td>Three suspicions.</td></tr>
+    <tr><td>Erased</td><td>The shift ends before you escape.</td></tr>
+  </table></div>
+  <p>The door to the boss room opens only with the key.</p>
+
+  <p class="foot">CUTTERPILLAR by <a href="https://www.gamedev.science">GICI</a> · 2026 Epic AI MegaJam · <a href="https://gamedevscience.itch.io/cutterpillar">Play on itch.io</a> · <a href="./">Devlog</a><br>All AI workers in the game are fictional.</p>
+</div>
+</body>
+</html>
